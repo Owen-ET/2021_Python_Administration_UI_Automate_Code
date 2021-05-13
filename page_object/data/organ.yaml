@@ -1,0 +1,19 @@
+organName: 机构51201
+organCode: jg51201
+provinceLevelArea: 省级地区
+municipalLevelArea: 市级地区
+districtLevelArea: 区级地区
+districtName: 滨海新区      # 经常改的
+organType: 请选择机构类型
+organTypeName: 其他        # 经常改的
+addressName: 蓟州区        # 经常改的
+fullAddress: 请输入详细地址
+fullAddressText: 蓟州区黄崖关
+contacts: 请输入联系人
+contactsText: zc联系人
+telePhone: 请您输入手机号
+telePhoneText: 13642040631
+explain: 请输入说明 (100字以内)
+explainText: zc机构说明
+
+

@@ -1,0 +1,4 @@
+login: "/data/login.yaml"
+selectData: "/data/selectData.yaml"
+organ: "/data/organ.yaml"
+organList: "/data/organList.yaml"
