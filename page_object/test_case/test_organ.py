@@ -13,7 +13,8 @@ class TestOrgan:
         self.login = self.web.goto_loginPage()
 
     def teardown(self):
-        Web().stopWeb()
+        # Web().stopWeb()
+        self.web.stopWeb()
 
     def test_addOrgan(self):
         """添加机构"""
