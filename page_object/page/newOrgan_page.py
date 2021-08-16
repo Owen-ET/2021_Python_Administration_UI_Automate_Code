@@ -3,6 +3,8 @@
 # @Time    : 2021/04/20 09:36
 # @Author  : zc
 # @File    : newOrgan_page.py
+from time import sleep
+
 from page_object.page.base_page import Page
 from page_object.locator.newOrganPage_loc import NewOrganPageLoc as loc
 
@@ -51,3 +53,4 @@ class NewOrganPage(Page):
         self.webDriverWait(loc.explain_loc).send_keys(loc.explainText)
         # 点击保存按钮
         self.el_click(loc.saveButton_loc)
+        sleep(0.5)

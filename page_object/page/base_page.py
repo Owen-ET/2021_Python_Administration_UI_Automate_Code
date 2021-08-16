@@ -25,14 +25,18 @@ class Page:
 
     def el_click(self, loc):
         """点击事件"""
-        self.find_element(loc).click()
+        self.webDriverWait(loc).click()
 
     def el_sendKeys(self, loc, value):
         """输入事件"""
-        self.find_element(loc).send_keys(value)
+        self.webDriverWait(loc).send_keys(value)
 
     def webDriverWait(self,loc):
         """显式等待，查找元素"""
-        WebDriverWait(self.driver, 1).until(EC.visibility_of_element_located(loc))
+        WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(loc))
         sleep(0.3)
         return self.find_element(loc)
+
+    def get_text(self,loc):
+        """获取元素的内容"""
+        return self.webDriverWait(loc).text

@@ -16,6 +16,8 @@ class OrganListPage(Page):
 
     organListData = Fun().getYamlData('organList')
     filePath = organListData['filePath']
+    organData = Fun().getYamlData('organ')
+    organName = organData['organName']
 
     def goto_newOrganPage(self):
         """跳转新增机构页面"""
@@ -29,3 +31,17 @@ class OrganListPage(Page):
         self.el_click(loc.batchImportButton_loc)
         self.el_click(loc.uploadOfCheckButton_loc)
         Fun().upload_file(self.filePath)
+
+    def delete_organ(self):
+        """删除机构"""
+
+        # 点击删除按钮
+        self.el_sendKeys(loc.seartOrgan_loc,self.organName)
+        self.el_click(loc.seartButton_loc)
+        self.el_click(loc.organCheckbox_loc)
+        self.el_click(loc.delOrganButton_loc)
+        self.el_click(loc.delSureButton_loc)
+
+    def delete_success(self):
+        """删除成功提示"""
+        return self.get_text(loc.delSuccess_loc)

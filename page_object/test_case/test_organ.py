@@ -23,8 +23,15 @@ class TestOrgan:
             .goto_newOrganPage()\
             .newOrgan()
 
-    def test_upload(self):
-        """上传文件"""
-        self.login.goto_mainPage()\
-            .goto_organListPage()\
-            .upload()
+    # def test_upload(self):
+    #     """上传文件"""
+    #     self.login.goto_mainPage()\
+    #         .goto_organListPage()\
+    #         .upload()
+
+    def test_deleteOrgan(self):
+        """删除机构"""
+        self.organListPage = self.login.goto_mainPage().goto_organListPage()
+        self.organListPage.delete_organ()
+        successText = self.organListPage.delete_success()
+        assert successText == "删除成功"

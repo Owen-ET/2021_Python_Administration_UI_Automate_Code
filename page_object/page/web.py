@@ -12,7 +12,7 @@ class Web:
 
     def startWeb(self):
         """开启WEB自动化"""
-        self.driver = webdriver.Chrome("/Users/zhangc/Desktop/SQM_Project/内网Git代码仓库/Administration_UI_Automate_Code/page_object/utils/chromedriver")
+        self.driver = webdriver.Chrome("/Users/zhangc/Desktop/SQM_Project/内网Git代码仓库/github/Administration_UI_Automate_Code/page_object/utils/chromedriver")
         self.driver.get("https://recycle_dev.17mine.cn:9700/#/login")
         self.driver.implicitly_wait(10)
         return self
