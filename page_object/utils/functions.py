@@ -19,6 +19,9 @@ class Functions:
         path = os.path.dirname(os.path.dirname(__file__))
         return path
 
+    def chromedriverPath(self):
+        return self.upPath() + '/utils/chromedriver'
+
     def getData(self, path):
         """获取yaml数据"""
         with open(path, 'r', encoding='utf-8') as file:

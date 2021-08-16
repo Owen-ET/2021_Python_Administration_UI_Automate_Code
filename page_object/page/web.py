@@ -8,6 +8,7 @@ import os
 from selenium import webdriver
 from page_object.page.login_page import LoginPage
 from selenium.webdriver.chrome.options import Options
+from page_object.utils.functions import Functions as Fun
 
 
 class Web:
@@ -27,7 +28,8 @@ class Web:
             print('使用无界面方式运行')
             chrome_options.add_argument("--headless")
 
-        self.driver = webdriver.Chrome(executable_path="/Users/zhangc/Desktop/SQM_Project/内网Git代码仓库/github/Administration_UI_Automate_Code/page_object/utils/chromedriver",
+        chromedriverPath = Fun().chromedriverPath()
+        self.driver = webdriver.Chrome(executable_path=chromedriverPath,
                                        options=chrome_options)
 
         # self.driver = webdriver.Chrome("/Users/zhangc/Desktop/SQM_Project/内网Git代码仓库/github/Administration_UI_Automate_Code/page_object/utils/chromedriver")
