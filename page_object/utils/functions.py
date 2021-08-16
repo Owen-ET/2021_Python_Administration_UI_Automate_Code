@@ -4,11 +4,12 @@
 # @Author  : zc
 # @File    : functions.py
 import os
-# import time
-# import pyperclip
+import time
+import pyautogui
+import pyperclip
 import yaml
-# from pykeyboard import PyKeyboard
-# from pymouse import PyMouse
+from pykeyboard import PyKeyboard
+from pymouse import PyMouse
 
 
 class Functions:
@@ -43,42 +44,42 @@ class Functions:
 
     def upload_file(self, path):
         """PyUserInput方法"""
-        pass
+        # pass
 
 
-        # # 创建鼠标对象
-        # k = PyKeyboard()
-        # # 创建键盘对象
-        # m = PyMouse()
-        # filepath = "/"
-        # # 模拟快捷键Command+Shift+G
-        # k.press_keys(["Command", "Shift", "G"])
-        # # 输入文件路径
-        # x_dim, y_dim = m.screen_size()
-        # m.click(x_dim // 2, y_dim // 2, 1)
-        # # 复制文件路径开头的斜杠/
-        # pyperclip.copy(filepath)
-        # # 粘贴斜杠/
-        # k.press_keys(["Command", "V"])
-        # time.sleep(2)
-        # # 输入文件全路径进去
-        # k.type_string(path)
-        # fileName = '机构信息-批量导入模板 (9).xls'
-        # pyperclip.copy(fileName)
-        # k.press_keys(["Command", "V"])
-        # time.sleep(2)
-        # k.press_key("Return")
-        # time.sleep(2)
-        # k.press_key("Return")
-        # time.sleep(2)
+        # 创建鼠标对象
+        k = PyKeyboard()
+        # 创建键盘对象
+        m = PyMouse()
+        filepath = "/"
+        # 模拟快捷键Command+Shift+G
+        k.press_keys(["Command", "Shift", "G"])
+        # 输入文件路径
+        x_dim, y_dim = m.screen_size()
+        m.click(x_dim // 2, y_dim // 2, 1)
+        # 复制文件路径开头的斜杠/
+        pyperclip.copy(filepath)
+        # 粘贴斜杠/
+        k.press_keys(["Command", "V"])
+        time.sleep(2)
+        # 输入文件全路径进去
+        k.type_string(path)
+        fileName = '机构信息-批量导入模板 (9).xls'
+        pyperclip.copy(fileName)
+        k.press_keys(["Command", "V"])
+        time.sleep(2)
+        k.press_key("Return")
+        time.sleep(2)
+        k.press_key("Return")
+        time.sleep(2)
 
-    # def upload_file2(self,path):
-    #     """pyautogui方法"""
-    #     filepath = "/"
-    #     pyautogui.press('shiftleft')
-    #     pyautogui.hotkey("Command", "Shift", "G")
-    #     pyautogui.typewrite(path, interval=0.25)
-    #     pyautogui.press('return')
-    #     time.sleep(2)
-    #     pyautogui.press('return')
-    #     time.sleep(2)
+    def upload_file2(self,path):
+        """pyautogui方法"""
+        filepath = "/"
+        pyautogui.press('shiftleft')
+        pyautogui.hotkey("Command", "Shift", "G")
+        pyautogui.typewrite(path, interval=0.25)
+        pyautogui.press('return')
+        time.sleep(2)
+        pyautogui.press('return')
+        time.sleep(2)
