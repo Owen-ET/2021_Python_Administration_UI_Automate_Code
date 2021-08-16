@@ -29,6 +29,7 @@ class Web:
             chrome_options.add_argument("--headless")
 
         chromedriverPath = Fun().chromedriverPath()
+        print(chromedriverPath)
         self.driver = webdriver.Chrome(executable_path=chromedriverPath,
                                        options=chrome_options)
 
