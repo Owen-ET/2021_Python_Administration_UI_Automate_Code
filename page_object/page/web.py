@@ -32,8 +32,8 @@ class Web:
         # print(chromedriverPath)
         # self.driver = webdriver.Chrome(executable_path=chromedriverPath,
         #                                options=chrome_options)
-
-        self.driver = webdriver.Chrome("/Users/zhangc/Desktop/SQM_Project/内网Git代码仓库/github/Administration_UI_Automate_Code/page_object/utils/chromedriver")
+        chromedriverPath = Fun().chromedriverPath()
+        self.driver = webdriver.Chrome(chromedriverPath)
         self.driver.get("https://recycle_dev.17mine.cn:9700/#/login")
         self.driver.implicitly_wait(10)
         return self
