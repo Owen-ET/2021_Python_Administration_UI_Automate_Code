@@ -45,3 +45,13 @@ class OrganListPage(Page):
     def delete_success(self):
         """删除成功提示"""
         return self.get_text(loc.delSuccess_loc)
+
+    def seart_organ(self):
+        """查询数据"""
+        self.el_sendKeys(loc.seartOrgan_loc, self.organName)
+        self.el_click(loc.seartButton_loc)
+        try:
+            self.webDriverWait(loc.organCheckbox_loc)
+            return "存在"
+        except:
+            return "不存在"

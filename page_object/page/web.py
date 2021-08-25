@@ -13,7 +13,7 @@ from page_object.utils.functions import Functions as Fun
 
 class Web:
 
-    def startWeb(self):
+    def startWeb(self,url):
         """开启WEB自动化"""
 
         # # 控制是否采用无界面形式运行自动化测试
@@ -34,7 +34,7 @@ class Web:
         #                                options=chrome_options)
         chromedriverPath = Fun().chromedriverPath()
         self.driver = webdriver.Chrome(chromedriverPath)
-        self.driver.get("https://recycle_dev.17mine.cn:9700/#/login")
+        self.driver.get(url)
         self.driver.implicitly_wait(10)
         return self
 
